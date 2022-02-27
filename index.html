@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>RockBusters!</h1>
+    <button id="start-btn" onclick="startGame()">Start Game</button>
+    <div class="q-container">
+      <h4>
+        Round <span id="r-no">0</span><br />Question <span id="q-no">0</span>
+      </h4>
+      <h2 id="question">Question goes here</h2>
+      <h3>Hint letters: <span id="hint"></span></h3>
+    </div>
+
+    <input type="'text" id="guess" placeholder="Guess" />
+    <button id="guess-btn" onclick="submittedAnswer()">Submit</button>
+
+    <p id="score-display">Score:</p>
+
+    <div class="container">
+      <p>First broadcast:</p>
+      <p>Karls 'logic':</p>
+      <p>link to show</p>
+    </div>
+
+    <script src="logic.js" async defer></script>
+  </body>
+</html>
