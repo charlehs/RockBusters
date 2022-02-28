@@ -41,27 +41,44 @@ const round2 = [
   },
 ];
 
-const rounds = [round1, round2];
+const round3 = [
+  {
+    question: "At the moment I'm in a river full of logs.",
+    letters: "J T",
+    answer: "justin timberlake",
+  },
+  {
+    question: "That lad's got bad asthma.",
+    letters: "W",
+    answer: "weezer",
+  },
+  {
+    question:
+      "I saw Mousetrap the other night, but the heating was knackered and it ruined the evening.",
+    letters: "C",
+    answer: "coldplay",
+  },
+];
+
+const rounds = [round1, round2, round3];
 
 let roundNo = 0;
 let questionNo = 0;
 let correctAnswer = rounds[roundNo][questionNo].answer;
 
 function getQuestion() {
-  if (questionNo < rounds[roundNo].length) {
+  if (questionNo < rounds[roundNo].length - 1) {
     questionNo++;
-    console.log(roundNo, questionNo);
+    //asign question number
+    document.getElementById("q-no").innerText = questionNo + 1;
   } else {
-    // fix this
     roundNo++;
     questionNo = 0;
-    console.log(roundNo, questionNo);
+    document.getElementById("q-no").innerText = questionNo + 1;
+    document.getElementById("r-no").innerText = roundNo + 1;
   }
+  // need to add logic for end of round and for final question
 }
-
-// console.log(rounds[0][0].question);
-
-// console.log(round[0].question);
 
 const question = document.getElementById("question");
 const hintLetters = document.getElementById("hint");
@@ -69,6 +86,8 @@ const hintLetters = document.getElementById("hint");
 function startGame() {
   question.innerText = rounds[roundNo][questionNo].question;
   hintLetters.innerHTML = rounds[roundNo][questionNo].letters;
+  document.getElementById("q-no").innerText = questionNo + 1;
+  document.getElementById("r-no").innerText = roundNo + 1;
 }
 
 function submittedAnswer() {
@@ -82,8 +101,14 @@ function submittedAnswer() {
     question.innerText = rounds[roundNo][questionNo].question;
     hintLetters.innerHTML = rounds[roundNo][questionNo].letters;
   } else {
-    console.log("incorrect answer");
+    console.log("try again!");
+    // add score - 1 & if score hits 0 lose
+    // add skip question button
   }
 }
-// console.log(currentAnswer);
-function nextQuestion() {}
+
+function hide() {
+  var x = document.getElementById("q-container");
+  x.style.display = "block";
+  document.getElementById("start-btn").style.display = "none";
+}
