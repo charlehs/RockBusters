@@ -13,8 +13,8 @@ Click [here](https://charlehs.github.io/RockBusters/) for live site.
 ## Version History
 
 * 0.2
-    * tktktktkt
-    * tktktktkt
+    * 28/2/22
+    * Game is now working. Also added start button hide / appear functionality.
 * 0.1
     * 27/2/22 Initial Release
     * Basic app made, logic still needs work
