@@ -109,6 +109,6 @@ function submittedAnswer() {
 
 function hide() {
   var x = document.getElementById("q-container");
-  x.style.display = "block";
+  x.style.display = "flex";
   document.getElementById("start-btn").style.display = "none";
 }

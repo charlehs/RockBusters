@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Add Nav bar -->
     <h1>RockBusters!</h1>
     <button id="start-btn" onclick="startGame(), hide()">Start Game</button>
 
@@ -18,9 +19,12 @@
       </h4>
       <h2 id="question">Question goes here</h2>
       <h3>Initials: <span id="hint"></span></h3>
-
-      <input type="'text" id="guess" placeholder="Guess" />
-      <button id="guess-btn" onclick="submittedAnswer()">Submit</button>
+      <div>
+        <input type="'text" id="guess" placeholder="Guess" />
+        <button type="submit" id="guess-btn" onclick="submittedAnswer()">
+          Submit
+        </button>
+      </div>
 
       <p id="score-display">Score:</p>
     </div>
