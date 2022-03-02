@@ -12,6 +12,9 @@ Click [here](https://charlehs.github.io/RockBusters/) for live site.
 
 ## Version History
 
+* 0.4
+    * 2/3/22
+    * Added round buttons, two more rounds & score functionality.
 * 0.3
     * 1/3/22
     * Dabbled with CSS
